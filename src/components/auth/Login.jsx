@@ -16,7 +16,7 @@ function Login() {
     }
     setLoading(true);
     try {
-      const res = await axios.post("https://society-managment-system-backend.vercel.app/api/login", {
+      const res = await axios.post("https://society-backend-ivory.vercel.app/api/login", {
         email,
         password,
       });
