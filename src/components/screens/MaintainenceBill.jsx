@@ -63,6 +63,7 @@ useEffect(() => {
     try {
       setLoading(true)
       const res = role === "admin" ? await getAllBills(token) : await getMyBills(token)
+      console.log("📦 Bills fetched from API:", res.data)
       setBills(res.data)
     } catch (error) {
       console.error("Failed to load bills:", error)
