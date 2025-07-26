@@ -1,10 +1,9 @@
 import axios from "../../utils/axios" // Assuming this path is correct for your axios instance
 
-export const getAllBills = async (token) =>
-const res = await  axios.get("/maintenancebills", {
+export const getAllBills = (token) =>
+ axios.get("/maintenancebills", {
     headers: { Authorization: `Bearer ${token}` },
   })
-console.log("✅ /maintenancebills response:", response.data);
 
 export const createBill = (data, token) =>
   axios.post("/maintenancebills", data, {
