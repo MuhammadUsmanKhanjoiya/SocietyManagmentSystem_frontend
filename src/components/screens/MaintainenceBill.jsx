@@ -104,9 +104,7 @@ const filteredRows = useMemo(() => {
     .sort((a, b) => new Date(b.dueDate).getTime() - new Date(a.dueDate).getTime());
 }, [bills, role, statusFilter, monthFilter]);
 
-useEffect(() => {
-  console.log("🔍 Filtered Rows:", filteredRows);
-}, [filteredRows]);
+
   const openForm = (bill = null) => {
     if (bill) {
       setEditingId(bill._id)
