@@ -72,7 +72,9 @@ useEffect(() => {
       setLoading(false)
     }
   }
-
+useEffect(() => {
+  console.log("🔍 Filtered Rows:", filteredRows);
+}, [filteredRows]);
 const filteredRows = useMemo(() => {
   const allRows = role === "admin"
     ? bills.flatMap((bill) =>
@@ -156,9 +158,7 @@ const filteredRows = useMemo(() => {
       toast.error("Failed to save bill. Please try again.")
     }
   }
-useEffect(() => {
-  console.log("🔍 Filtered Rows:", filteredRows);
-}, [filteredRows]);
+
 
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this bill?")) return
