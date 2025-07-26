@@ -4,6 +4,7 @@ export const getAllBills = (token) =>
   axios.get("/maintenancebills", {
     headers: { Authorization: `Bearer ${token}` },
   })
+console.log("✅ /maintenancebills response:", response.data);
 
 export const createBill = (data, token) =>
   axios.post("/maintenancebills", data, {
