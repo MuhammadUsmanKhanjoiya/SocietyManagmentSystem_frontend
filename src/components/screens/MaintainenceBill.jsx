@@ -156,6 +156,9 @@ const filteredRows = useMemo(() => {
       toast.error("Failed to save bill. Please try again.")
     }
   }
+useEffect(() => {
+  console.log("🔍 Filtered Rows:", filteredRows);
+}, [filteredRows]);
 
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this bill?")) return
